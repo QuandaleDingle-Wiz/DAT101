@@ -44,46 +44,30 @@ printOut(newLine);
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
 /*Convert 6,322.52 minutes to days, hours, minutes, and seconds. (Not allowed to use date objects). The
 task must be solved with primitives.*/
-const NumberOfMinutes = 6322.52;
-const SecondsInMinutes = 60;
-const MinutesInHours = 60;
-const HoursInDays = 24; 
-let Solution4_Calc = NumberOfMinutes / (60 * 24);
-const Solution4_Days = Math.floor(Solution4_Calc);
-printOut("Days = " + Solution4_Days);
-
-Solution4_Calc = Solution4_Calc - Solution4_Days;
-Solution4_Calc = Solution4_Calc * HoursInDays;
-const Solution4_Hours = Math.floor(Solution4_Calc);
-printOut("Hours = " + Solution4_Hours);
-
-Solution4_Calc = Solution4_Calc - Solution4_Hours;
-Solution4_Calc = Solution4_Calc * MinutesInHours;
-const Solution4_Minutes = Math.floor(Solution4_Calc);
-printOut("Minutes = " + Solution4_Minutes);
-
-Solution4_Calc = Solution4_Calc - Solution4_Minutes;
-Solution4_Calc = Solution4_Calc * SecondsInMinutes;
-const Solution4_Seconds = Math.floor(Solution4_Calc);
-printOut("Seconds = " + Solution4_Seconds);
+printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
-/*Convert 54 dollars to Norwegian kroner, and print the price for both:
-NOK → USD and USD → NOK.
-Use 76 NOK = 8.6 USD as the exchange rate.
-The answer must be in whole "Kroner" and whole "dollars".*/
-const NOK = 76 / 8.6;
-const USD = 8.6 / 76;
-let AmountUSD = 54;
-const AmountNOK = Math.round(AmountUSD * NOK);
-printOut(AmountUSD + " dollars is " + AmountNOK + " kroner ");
-printOut(AmountNOK + " kroner is " + AmountUSD + " dollar ");
+/* Put your code below here!*/
+printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-printOut("Replace this with you answer!");
+/*Create a variable that contains the following text:
+"There is much between heaven and earth that we do not understand."*/
+let solution6Text = "There is much between heaven and earth that we do not understand.";
+const count = solution6Text.replace(/\s+/g,"").length;
+const charPos = solution6Text.charAt(19);
+const sliceStart = 35;
+const sliceEnd = sliceStart + 8;
+const charBetween = solution6Text.substring(sliceStart, sliceEnd);
+const earthIndex = solution6Text.indexOf("earth");
+
+printOut(solution6Text);
+printOut("Antall bokstaver i teksten: " + count.toString());
+printOut("Karakteren i posisjon 19 er: " + charPos);
+printOut("Karakteren mellom 35 og 8 er: ")
+
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
