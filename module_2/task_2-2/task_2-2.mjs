@@ -82,7 +82,7 @@ printOut(AmountNOK + " kroner is " + AmountUSD + " dollar ");
 printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
-/*Create a variable that contains the following text:
+/* Create a variable that contains the following text:
 "There is much between heaven and earth that we do not understand."*/
 let solution6Text = "There is much between heaven and earth that we do not understand.";
 const count = solution6Text.replace(/\s+/g,"").length;
