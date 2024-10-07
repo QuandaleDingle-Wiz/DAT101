@@ -3,7 +3,7 @@ import { initPrintOut, printOut, newLine } from "../../common/script/utils.mjs";
 initPrintOut(document.getElementById("txtOut"));
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
-/*Use JavaScript to calculate the following expression, ensuring the result is -34:
+/* Use JavaScript to calculate the following expression, ensuring the result is -34:
 2 + 3 * 2 - 4 * 6
 Display both the original expression and the modified expression (with parentheses) along with their
 results on the HTML page.*/
@@ -16,7 +16,7 @@ printOut("2 + (3*(2-4) * 6 = " + Solution);
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
-/*Convert 25 metres and 34 centimeters to inches. An inch is 25.4 millimeters (maximum 2 decimal places in
+/* Convert 25 metres and 34 centimeters to inches. An inch is 25.4 millimeters (maximum 2 decimal places in
 the answer).*/
 const MillInInches = 25.4;
 const MillInMetres = 1000;
@@ -28,7 +28,7 @@ printOut(fixedSolution);
 printOut(newLine);
 
 printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
-/*Convert 3 days, 12 hours, 14 minutes, and 45 seconds to minutes. (Not allowed to use date objects). The
+/* Convert 3 days, 12 hours, 14 minutes, and 45 seconds to minutes. (Not allowed to use date objects). The
 task must be solved with primitives.*/
 const SecondsInMinute = 60;
 const MinutesInHour = 60;
@@ -42,7 +42,7 @@ printOut("AnswerSolution = " + Solution3.toFixed(2));
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
-/*Convert 6,322.52 minutes to days, hours, minutes, and seconds. (Not allowed to use date objects). The
+/* Convert 6,322.52 minutes to days, hours, minutes, and seconds. (Not allowed to use date objects). The
 task must be solved with primitives.*/
 const NumberOfMinutes = 6322.52;
 const SecondsInMinutes = 60;
@@ -69,7 +69,7 @@ printOut("Seconds = " + Solution4_Seconds);
 printOut(newLine);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
-/*Convert 54 dollars to Norwegian kroner, and print the price for both:
+/* Convert 54 dollars to Norwegian kroner, and print the price for both:
 NOK → USD and USD → NOK.
 Use 76 NOK = 8.6 USD as the exchange rate.
 The answer must be in whole "Kroner" and whole "dollars".*/
@@ -82,7 +82,7 @@ printOut(AmountNOK + " kroner is " + AmountUSD + " dollar ");
 printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
-/*Create a variable that contains the following text:
+/* Create a variable that contains the following text:
 "There is much between heaven and earth that we do not understand."*/
 let solution6Text = "There is much between heaven and earth that we do not understand.";
 const count = solution6Text.replace(/\s+/g,"").length;
@@ -100,7 +100,7 @@ printOut("Index for earth er: " + earthIndex)
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
-/*Comparison, print the values for the following expressions (evaluate whether the statements are true*/
+/* Comparison, print the values for the following expressions (evaluate whether the statements are true*/
 let s7a = 5 > 3;
 let s7b = 7 >= 7;
 let s7c = "a" > "b";
@@ -121,7 +121,7 @@ printOut("(abcd > bcd) === false " + s7h.toString());
 printOut(newLine);
 
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");
-/*Convert and print the following expressions*/
+/* Convert and print the following expressions*/
 let solution8ptA = "254";
 let solution8ptB = "57.23";
 let solution8ptC = "25 kroner";
@@ -131,7 +131,7 @@ printOut("25 kroner = " + parseInt(solution8ptC));
 printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
-/*Create a variable "r" and randomly generate a number from 1 to 360 (1 >= r <= 360)*/
+/* Create a variable "r" and randomly generate a number from 1 to 360 (1 >= r <= 360)*/
 let r = (Math.random() * 360) + 1;
 
 printOut("(math.random() * 360) + 1 = " + r.toFixed());
@@ -139,7 +139,7 @@ printOut(newLine);
 
 /* Task 10*/
 printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
-/*Use modulus (%) to calculate how many weeks and days are in 131 days*/
+/* Use modulus (%) to calculate how many weeks and days are in 131 days*/
 let totalDays = 131;
 
 const weeks = Math.floor(totalDays / 7);
