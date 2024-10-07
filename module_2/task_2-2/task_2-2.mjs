@@ -69,7 +69,7 @@ printOut("Seconds = " + Solution4_Seconds);
 printOut(newLine);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
-/*Convert 54 dollars to Norwegian kroner, and print the price for both:
+/* Convert 54 dollars to Norwegian kroner, and print the price for both:
 NOK → USD and USD → NOK.
 Use 76 NOK = 8.6 USD as the exchange rate.
 The answer must be in whole "Kroner" and whole "dollars".*/
