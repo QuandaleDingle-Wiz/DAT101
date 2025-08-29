@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canvas‑hus</title>
+  <style>
+    :root { --w: 600px; --h: 600px; }
+    body {
+      margin: 0; display: grid; place-items: center; min-height: 100vh;
+      background: #fdfeff; font-family: system-ui, Arial, Helvetica, sans-serif;
+    }
+    canvas { border: 1px solid #d3d3d3; width: var(--w); height: var(--h); max-width: 95vw; height: auto; }
+    .hint { position: fixed; bottom: 10px; left: 10px; opacity: .6; font-size: .9rem;}
+  </style>
+</head>
+<body>
+  
+  <canvas id="myCanvas" width="600" height="600"></canvas>
+
+  <script>
+
+    (function() {
+      const canvas = document.getElementById('myCanvas');
+      const ctx = canvas.getContext('2d');
+
+      const NAVN = 'Wisdom Soe';
+
+      function rect(x, y, w, h, fillStyle, strokeStyle) {
+        ctx.beginPath();
+        ctx.rect(x, y, w, h);
+        if (fillStyle) { ctx.fillStyle = fillStyle; ctx.fill(); }
+        if (strokeStyle) { ctx.strokeStyle = strokeStyle; ctx.stroke(); }
+      }
+      function circle(cx, cy, r, fillStyle, strokeStyle) {
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        if (fillStyle) { ctx.fillStyle = fillStyle; ctx.fill(); }
+        if (strokeStyle) { ctx.strokeStyle = strokeStyle; ctx.stroke(); }
+      }
+      function poly(points, fillStyle, strokeStyle) {
+        ctx.beginPath();
+        ctx.moveTo(points[0][0], points[0][1]);
+        for (let i = 1; i < points.length; i++) {
+          ctx.lineTo(points[i][0], points[i][1]);
+        }
+        ctx.closePath();
+        if (fillStyle) { ctx.fillStyle = fillStyle; ctx.fill(); }
+        if (strokeStyle) { ctx.strokeStyle = strokeStyle; ctx.stroke(); }
+      }
+
+      // Fjell
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = "#000000";
+      ctx.beginPath();
+      ctx.moveTo(0, 160);
+      ctx.lineTo(160, 200);
+      ctx.lineTo(360, 120);
+      ctx.lineTo(600, 165);
+      ctx.stroke();
+
+      // Sol
+      circle(150, 120, 30, "#ffd91a");
+
+      // Hus
+      rect(150, 260, 300, 220, "#1e90ff");
+
+      // Tak 
+      poly([
+        [120, 260], [480, 260], [430, 210], [170, 210]
+      ], "#000000");
+
+      // Vinduer
+      rect(175, 320, 70, 70, "#f0e68c");
+      rect(350, 320, 70, 70, "#f0e68c");
+
+      // Dør
+      rect(265, 360, 60, 120, "#DEB887");
+
+      // Navn
+      ctx.fillStyle = "#000000";
+      ctx.font = "14px Arial";
+      ctx.fillText(NAVN, 20, 560);
+      ctx.fillText("Institutt for IKT", 20, 577);
+      ctx.fillText("Universitetet i Agder", 20, 594);
+    })();
+  </script>
+</body>
+</html>
